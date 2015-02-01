@@ -19,7 +19,6 @@ public class DemoLoop extends GameLoop{
     int ax,ay,bx,by,cx,cy;
     int color;
     int x,y;
-    Sound test;
     long time;
     public DemoLoop(int width, int height){
         super(width,height);
@@ -28,8 +27,6 @@ public class DemoLoop extends GameLoop{
     @Override
     public void Initialize() {
         backgroundColor=0;
-        test=new Sound("fwc.wav");
-        test.play();
         time=System.currentTimeMillis();
     }
 
@@ -47,8 +44,6 @@ public class DemoLoop extends GameLoop{
         cy=(int)(-Math.sin(angle)*dist);
         float v=1-((float)mouseY/(float)height);
         float p=-1+2*((float)mouseX/(float)width);
-        test.setCutoff(v);
-        test.setPan(p);
         //throw new UnsupportedOperationException("Not supported yet.");
 
     }
